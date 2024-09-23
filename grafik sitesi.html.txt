@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grafik sitem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --aralik: 20px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .tum-kutu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--aralik);
+            width: 100%;
+            height: auto;
+            padding: var(--aralik);
+        }
+
+        .her-kutu1 {
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 2px 2px rgb(211, 205, 205);
+        }
+
+        .her-kutu1 h2 {
+            margin-bottom: 10px;
+            color: rgb(66, 63, 63);
+        }
+
+        .her-kutu1 h1 {
+            font-size: 48px;
+            color: rgb(145, 137, 137);
+            font-weight: normal;
+        }
+
+        .altgrafikler {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 150px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .altgrf {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--aralik);
+            width: 100%;
+        }
+
+        .grafik1,
+        .grafik2 {
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 2px 2px rgb(211, 205, 205);
+        }
+
+        .cerceve {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            height: 240px;
+        }
+
+        .gr {
+            border-radius: 5px;
+            width: 40px;
+            margin: 3px;
+            background-color: #eeb75e;
+        }
+
+        .altbolum {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .daire {
+            min-width: 200px;
+            height: 200px;
+            margin-top: 30px;
+        }
+
+        .dis {
+            background: conic-gradient(#366d60 80%, #9eb7cb 20%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ic {
+            width: 60%;
+            height: 60%;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .cer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            margin-left: 20px;
+        }
+
+        .her-renk1,
+        .her-renk2 {
+            display: flex;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 110px;
+        }
+
+        .her-renk1 {
+            background-color: #366d60;
+        }
+
+        .her-renk2 {
+            background-color: #9eb7cb;
+        }
+
+        h3 {
+            color: rgb(66, 63, 63);
+            font-size: 23px;
+            margin-left: 22px;
+
+        }
+
+        @media (max-width: 1100px) {
+            .tum-kutu {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 660px) {
+            .tum-kutu {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 440px) {
+
+            .altgrf {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .tum-kutu {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            h3 {
+                font-size: 85%;
+            }
+
+            .grafik2 {
+                margin-bottom: var(--aralik);
+            }
+        }
+
+        @media (max-width: 380px) {
+            .daire {
+                min-width: 110px;
+                height: 110px;
+            }
+
+            .grafik2 {
+                margin-bottom: var(--aralik);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tum-kutu">
+        <div class="her-kutu1">
+            <h2>Completed tasks</h2>
+            <h1>174</h1>
+        </div>
+        <div class="her-kutu1">
+            <h2>Incomplete tasks</h2>
+            <h1>30</h1>
+        </div>
+        <div class="her-kutu1">
+            <h2>Overdue tasks</h2>
+            <h1>7</h1>
+        </div>
+        <div class="her-kutu1">
+            <h2>Total tasks</h2>
+            <h1>204</h1>
+        </div>
+    </div>
+
+    <div class="altgrafikler">
+        <div class="altgrf">
+            <div class="grafik1">
+                <h2>Incomplete tasks by section</h2>
+                <div class="cerceve">
+                    <div class="gr" style="height: 200px;"></div>
+                    <div class="gr" style="height: 130px;"></div>
+                    <div class="gr" style="height: 170px;"></div>
+                    <div class="gr" style="height: 70px;"></div>
+                    <div class="gr" style="height: 160px;"></div>
+                    <div class="gr" style="height: 180px;"></div>
+                    <div class="gr" style="height: 50px;"></div>
+                    <div class="gr" style="height: 160px;"></div>
+                    <div class="gr" style="height: 140px;"></div>
+                    <div class="gr" style="height: 40px;"></div>
+                </div>
+            </div>
+
+            <div class="grafik2">
+                <h2>Tasks by completion status</h2>
+                <div class="altbolum">
+                    <div class="daire">
+                        <div class="dis">
+                            <div class="ic"></div>
+                        </div>
+                    </div>
+                    <div class="cer">
+                        <div class="her-renk1">
+                            <h3>Completed</h3>
+                        </div>
+                        <div class="her-renk2">
+                            <h3>Incomplete</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
